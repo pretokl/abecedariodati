@@ -1,0 +1,33 @@
+Instalando o Docker
+
+Para distribuições Linux é muito simples de se instalar o Docker, já quem usa OSX ou Windows precisa rodar o docker dentro de uma Máquina Virtual.
+
+root@ubuntu:~$ apt-get install docker.io
+
+Comandos Básicos
+
+Agora que você já tem o Docker instalado em sua máquina, vamos ver os principais comandos que você precisa para poder baixar imagens e executar containers.
+
+Para o docker poder baixar uma imagem é necessário que ela esteja no Docker Hub ou em algum outro registry. Por padrão se nenhum outro registry for especificado a imagem será baixada do Docker Hub.
+
+No Docker Hub, existem milhares de imagens disponíveis que a comunidade foi contribuindo e que facilitam muito a vida do desenvolvedor. Você pode montar um ambiente completo em questão de minutos baixando as imagens que precisar e ir linkando umas com as outras. Em um outro post explicarei uma forma de versionar essa linkagem de containers usando Docker Compose.
+
+rroot@ubuntu:~$ docker pull [nome da imagem]; #Baixa a imagem.
+
+Quando você executa o comando acima, o docker irá baixar a imagem e deixar salva em sua máquina. Ela ainda não estará rodando, pois é só a imagem o que vai ser executado é um container, você pode executar vários containers da mesma imagem.
+
+rroot@ubuntu:~$ docker images; #Lista todas as imagens baixadas
+
+root@ubuntu:~$ docker run [nome da imagem]; #Inicia um container da imagem que você escolheu.
+
+O comando docker run tem diversos parâmetros que você pode passar como: volume (-v) para você mapear uma pasta da máquina pra dentro do container, qual porta (-p) você quer externar para que a máquina consiga fazer requisições dentro do container, enfim são várias configurações possíveis.
+
+É interessante você pegar alguns exemplos práticos nas próprias descrições das imagens para entender o funcionamento geral e ver a documentação oficial para entender a utilidade de cada parâmetro.
+
+rroot@ubuntu:~$ docker ps; # Lista os containers em execução
+
+root@ubuntu:~$ docker exec [container id] [comando]; #Executa comandos dentro do container
+
+root@ubuntu:~$ docker stop $(docker ps -aq); #Para a execução de todos dos containers
+
+root@ubuntu:~$ docker rm $(docker ps -aq); #Exclui todos os containers criados

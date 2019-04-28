@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+sudo apt-get install  g++  libboost1.58-all-dev  scons    pkg-config libusb-1.0-0-dev  git-core   ibx11-dev      libudev-dev   x11proto-core-dev  libdbus-glib-1-dev

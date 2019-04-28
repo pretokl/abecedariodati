@@ -1,0 +1,28 @@
+Instalação do anbox para linux (Mint)
+ 
+1 - Instalação dos modulos de kernel
+
+ sudo add-apt-repository ppa:morphis/anbox-support ;
+ sudo apt update;
+ sudo apt install linux-headers-generic anbox-modules-dkm;
+
+2 - Verificação de novos diretorios no sistema
+
+ls -1 /dev/{ashmem,binder}
+
+3 - Instalação do Anbox via snap
+
+sudo snap install --devmode --beta anbox ;
+sudo snap refresh --devmode --beta anbox;
+snap info anbox
+
+
+4 - Instalação dos apks
+
+sudo apt install android-tools-adb
+
+adb install my-app.apk
+
+ou
+
+anbox.appmgr

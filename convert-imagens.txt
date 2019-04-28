@@ -1,0 +1,28 @@
+Convertendo imagens via terminal no linux
+
+ImageMagick - 
+
+# Debian e derivados 
+
+sudo apt-get install imagemagick 
+
+# Arch e derivados
+
+sudo pacman -S imagemagick
+
+# Diminuindo o tamanho da imagem usando o '%'. Porcentagem define o tamanho que a imagem
+ficará em relação a original.
+
+ex:
+
+sudo convert imagem-original -resize 60% nova-imagem
+
+# Mundando a extensão da imagem
+
+convert exemplo.jpg exemplo.png
+
+# Usando mogrify para mudar a extensão de um lote de imagens
+
+mogrify -format jpg *.gif
+
+

@@ -1,0 +1,16 @@
+Como mudar a logo do Linux Mint
+1 - Escolha uma logo  do tipo PNG e que tenha uma resolução de 128x115 ou até 200x200, pois maior que isso ficará muito grande.
+
+2 - Trocar as imagens que estão no diretório "/usr/share/plymouth/themes/mint-logo/"
+Dentro desse diretório existe duas imagens que devem ser trocadas
+São elas; "mint-logo.png" e "mint-logo16.png"
+Troque-as com o sudo, pois é preciso ter acesso de superusuário
+
+sudo logo-nova.png /usr/share/plymouth/themes/mint-logo/mint-logo.png
+sudo logo-nova.png /usr/share/plymouth/themes/mint-logo/mint-logo16.png
+
+3 - Atualizar as entradas no kernel..
+
+sudo update-initramfs -u
+
+Pronto agora reinicie o sistema e divirta-se com a sua nova logo...

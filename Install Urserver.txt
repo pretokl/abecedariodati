@@ -1,0 +1,14 @@
+#! /bin/sh
+
+# Instalação do pacote Urserver.deb
+
+# 
+ xarchiver -x . urserver urserver-3.6.0.745.deb;
+ xarchiver -x . data.tar.gz;
+ sudo cp -r opt/urserver/ /opt/
+ sudo cp -r applications/urserver.desktop  /usr/share/applications/
+ sudo cp -r icons/urserver.png  /usr/share/icons/
+ sudo cp -r icons/hicolor/48x48/apps/urserver.png  /usr/share/icons/hicolor/48x48/apps/
+ sudo cp -r icons/hicolor/72x72/apps/urserver.png  /usr/share/icons/hicolor/72x72/apps/
+ sudo cp -r icons/hicolor/96x96/apps/urserver.png  /usr/share/icons/hicolor/96x96/apps/
+ sudo cp -r pixmaps/urserver.png /usr/share/pixmaps/

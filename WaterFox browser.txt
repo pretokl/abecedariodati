@@ -1,0 +1,35 @@
+O waterfox é especialmente para sistemas de 64bits
+# uname -m
+
+Instlar manualmente
+
+baixando pelo terminal
+
+# wget https://storage-waterfox.netdna-ssl.com/releases/linux64/installer/waterfox-56.2.8.en-US.linux-x86_64.tar.bz2 -O waterfox.tar.bz2
+
+Descompactando para o diretorio /opt/
+
+# sudo tar xjvf waterfox.tar.bz2 -C x/opt/
+
+Criando atalho para facilitar a execução do software
+
+# sudo ln -sf /opt/waterfox/waterfox /usr/bin/waterfox
+
+Criando atalho do programa para ser executado pelo lançador
+
+# echo -e '[Desktop Entry]\n Version=1.0\n Name=waterfox\n Exec=/opt/waterfox/waterfox --new-window %u\n Icon=/opt/waterfox/browser/chrome/icons/default/default256.png\n Type=Application\n Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;'| sudo tee /usr/share/applications/waterfox.desktop
+
+Caso queira colocar na área de trabalaho, basta copiar o atalho dapasta de aplicativos.
+
+# cp /usr/share/applications/waterfox.desktop  ~/Área\ de\ Trabalho/
+
+
+Fim
+Desinstalar
+
+# sudo rm -Rf /opt/waterfox*
+
+# sudo rm -Rf /usr/bin/waterfox
+
+# sudo rm -Rf /usr/share/applications/waterfox.desktop

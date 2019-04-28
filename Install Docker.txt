@@ -1,0 +1,16 @@
+Instalação feita no Linux Manjaro
+
+Instalçaãp do docker via snap
+
+$ wget -qO- https://get.docker.com/ | sh (Deu erro)
+
+$ sudo snap install docker (Funcionou)
+
+
+Instalação do docker-compose via code dos fornecedores 
+
+$ curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
+chmod +x /usr/local/bin/docker-machine  
+
+# Iniciando uma imagem 
+

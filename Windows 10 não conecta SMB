@@ -1,0 +1,16 @@
+O windows 10 não conecta servidores que não seja windows server.
+A maioria dos windows 10, em específico o windows education
+
+Hello,
+
+we have the same.
+
+I have figured out the following.
+
+On the Server (in our case 2008 R2) however one bit was wrong.
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
+
+SMB2=0 change to 1 -> restart
+
+The Problem is solved for me.
